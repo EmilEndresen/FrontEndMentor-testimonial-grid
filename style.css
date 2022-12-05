@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 85%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing: 1.4px;
+}
+
+.grid {
+    max-width: 350px;
+
+}
+
+.card {
+    border-radius: 10px;
+    padding: 2em;
+    margin-block: 10px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    margin-block: auto;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border: hsl(300, 40%, 59%) 1px solid;
+    border-radius: 999px;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+h3 {
+    margin-top: 1.8rem;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 500;
+    font-size: .8rem;
+    margin-top: 20px;
+    color: hsla(0, 0%, 100%, .8);
+}
+
+
+span {
+    font-size: 1rem;
+}
+
+.purple {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 5px right 45px;
+}
+
+.purple,
+.dark,
+.gray {
+    color: hsl(0, 0%, 100%);
+}
+
+.purple h2,
+.gray h2,
+.dark h2 {
+    color: hsla(0, 0%, 100%, .5);
+}
+
+.white-short,
+.white-long {
+    background-color: hsl(0, 0%, 100%);
+    color: hsla(216, 19%, 29%, 1);
+    font-weight: 400;
+}
+
+.white-short p,
+.white-long p {
+    color: hsla(216, 19%, 29%, 0.7)
+}
+
+.white-long h2,
+.white-short h2 {
+    color: hsla(216, 19%, 29%, 0.7);
+}
+
+.gray {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.dark {
+    background-color: hsl(219, 29%, 14%);
+}
+
+@media (min-width: 740px) {
+
+    .grid>* {
+        margin: 0;
+        -webkit-box-shadow: 10px 6px 30px -10px rgb(133, 133, 133);
+        -moz-box-shadow: 10px 6px 30px -10px rgb(133, 133, 133);
+        box-shadow: 10px 6px 30px -10px rgba(133, 133, 133, 1);
+    }
+
+    .grid {
+        margin: 10rem 0 5rem 0;
+        max-width: 80%;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "purple purple gray long"
+            "white dark dark long";
+    }
+
+    .purple {
+        grid-area: purple;
+    }
+
+    .gray {
+        grid-area: gray;
+    }
+
+    .white-long {
+        grid-area: long;
+    }
+
+    .white-short {
+        grid-area: white;
+    }
+
+    .dark {
+        grid-area: dark;
+    }
+}
